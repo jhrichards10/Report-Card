@@ -1,3 +1,5 @@
+import statistics
+
 # Create a dictionary
 studentDict = {}
 
@@ -107,38 +109,40 @@ while(userInput != "6"):
     # question 5 printed out
     question5 = input("Enter a student name: ")
 
+    avgGrade = statistics.mean(studentDict[question5])
+    
     ## if statement if student is listed
     if question5 in studentDict:
       
     # find grade correlating to the students name
-      for grade in :
+      for grade in studentDict[question5]:
 
         # for an a 
-        if(letterGrade <= 100):
-          return "A"        
+        if(90 <= avgGrade <= 100):
+          letterGrade = "A"        
         
         # for a b
-        if(letterGrade < 90):
-          return "B"
+        if(80 <= avgGrade < 90):
+          letterGrade = "B"
         
         # for a c
-        if(letterGrade < 80):
-          return "C"
+        if(70 <= avgGrade < 80):
+          letterGrade = "C"
         
         # for a d
-        if(letterGrade < 70):
-          return "D"
+        if(60 <= avgGrade < 70):
+          letterGrade = "D"
         
         # for a e
-        if(letterGrade < 60):
-          return "E"
+        if(50 <= avgGrade < 60):
+          letterGrade = "E"
         
         # for a f
-        if(letterGrade < 50):
-          return "F"
+        if(avgGrade < 50):
+          letterGrade = "F"
       
       # print the value which is grade
-        print(f"{question5}`s current grade is a {letterGrade}")
+      print(f"{question5}`s current grade is a {letterGrade}")
   
   # if user inputs 6
   if userInput == "6":
