@@ -90,7 +90,7 @@ while(userInput != "6"):
     if question4 in studentDict:
       
       # print quiz grades
-      print(f"{question4}`s quiz grades")
+      print(f"{question4}`s quiz grades:")
       
       # pick grade out of dictionary matching the name
       for grade in studentDict[question4]:
@@ -103,12 +103,30 @@ while(userInput != "6"):
 
     # question 5 printed out
     question5 = input("Enter a student name: ")
-    
+
+    letterGrade = float(letterGrade)
     # find grade correlating to the students name
-    for grade in studentDict.items():
+    for grade in studentDict[question4]:
+
+      letterGrade = grade
+
+      if(grade <= 100):
+        grade == A
+      
+      if(grade <= 90):
+        grade == B
+      
+      if(grade <= 80):
+        grade == C
+      
+      if(grade <= 70):
+        grade == D
+      
+      if(grade <= 59):
+        grade == F
       
       # print the value which is grade
-      print(value)
+      print(grade)
   
   # if user inputs 6
   if userInput == "6":
