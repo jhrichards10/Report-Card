@@ -57,13 +57,16 @@ while(userInput != "6"):
   elif userInput == "2":
     
     #
-    question2 = input("Enter a student name to remove: ")
+    question2 = input("Enter a student name: ")
 
     # if statement for question 2
     if question2 in studentDict:
       
       # remove name from dictionary 
-      studentDict.pop(input2)
+      studentDict.pop(question2)
+
+      #print name of student removed
+      print(f"{question2} removed!")
   
   # user input question 3  
   if userInput == "3":
@@ -84,35 +87,61 @@ while(userInput != "6"):
   if userInput == "4":
 
     # question 4 for the user
-    question4 = input("Enter student`s name to retrieve grades: ")
+    question4 = input("Enter student name: ")
     
     # if the name is in the dictionary
     if question4 in studentDict:
       
       # print quiz grades
-      print(f"{question4}`s quiz grades")
+      print(f"{question4}`s quiz grades:")
       
       # pick grade out of dictionary matching the name
       for grade in studentDict[question4]:
 
         # print grade
         print(grade)
-  
+
   # if user inputs 5 
   if userInput == "5":
 
     # question 5 printed out
     question5 = input("Enter a student name: ")
-    
+
+    ## if statement if student is listed
+    if question5 in studentDict:
+      
     # find grade correlating to the students name
-    for grade in studentDict.items():
+      for grade in :
+
+        # for an a 
+        if(letterGrade <= 100):
+          return "A"        
+        
+        # for a b
+        if(letterGrade < 90):
+          return "B"
+        
+        # for a c
+        if(letterGrade < 80):
+          return "C"
+        
+        # for a d
+        if(letterGrade < 70):
+          return "D"
+        
+        # for a e
+        if(letterGrade < 60):
+          return "E"
+        
+        # for a f
+        if(letterGrade < 50):
+          return "F"
       
       # print the value which is grade
-      print(value)
+        print(f"{question5}`s current grade is a {letterGrade}")
   
   # if user inputs 6
   if userInput == "6":
-    
+
     # print that its over
     print("Program over")
-    
